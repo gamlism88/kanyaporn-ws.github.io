@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "stitch-cli": "^0.0.19"
+  }
+}

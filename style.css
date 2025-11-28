@@ -1,0 +1,105 @@
+/* style.css */
+
+/* รีเซ็ตค่าเริ่มต้นของบราวเซอร์เพื่อความเรียบร้อย */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ทำให้ Padding/Border ไม่ขยายขนาด Element */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* พื้นหลังสีเทาอ่อน */
+    color: #333;
+}
+
+/* 1. สไตล์ของ Header และ Navigation */
+.main-header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between; /* จัดโลโก้และเมนูอยู่คนละด้าน */
+    align-items: center;
+    padding: 10px 5%; /* ให้มีระยะห่างด้านข้าง */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50; /* สีเขียวเด่น */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* 2. สไตล์ Hero Section (ส่วนเด่น) */
+.hero-section {
+    background: #4CAF50; /* พื้นหลังสีเขียว */
+    color: white;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #e67e22; /* สีส้ม CTA */
+    color: white;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #d35400; /* สีส้มเข้มขึ้นเมื่อเมาส์ชี้ */
+}
+
+/* 3. สไตล์ Content Section */
+.content-section {
+    padding: 60px 5%;
+    max-width: 1000px;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางหน้าจอ */
+    text-align: center;
+}
+
+/* 4. สไตล์ Footer */
+.main-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* =================================
+   🔥 Responsive Design (ทำให้รองรับมือถือ) 🔥
+   ================================= */
+@media (max-width: 600px) {
+    /* ถ้าความกว้างหน้าจอน้อยกว่า 600px ให้ใช้สไตล์นี้ (เน้นมือถือ) */
+    
+    .main-header {
+        flex-direction: column; /* เรียงจากด้านข้าง เป็นเรียงลง */
+        text-align: center;
+    }
+
+    .main-header nav a {
+        display: block; /* เมนูเรียงกันเป็นบล็อก */
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem; /* ลดขนาดตัวอักษรบนมือถือ */
+    }
+}
